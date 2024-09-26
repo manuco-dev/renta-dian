@@ -5,13 +5,18 @@ import { Model, isValidObjectId } from 'mongoose';
 import { Cliente } from './entities/cliente.entity';
 import { InjectModel } from '@nestjs/mongoose';
 import { toLowerCaseStrings } from 'src/helpers/string-helper';
+import { ConfigService } from '@nestjs/config';
+
+
 
 @Injectable()
 export class ClienteService {
 
   constructor(
     @InjectModel(Cliente.name)
-    private readonly clienteModel: Model<Cliente>
+    private readonly clienteModel: Model<Cliente>,
+
+    private readonly configServer: ConfigService
   ){}
 
   async create(createClienteDto: CreateClienteDto) {

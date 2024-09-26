@@ -18,7 +18,20 @@ yarn i -g @nestjs/cli
 docker-compose up-d
 ```
 
-## Stack Usado
-*MongoDb
 
-*Nest
+
+5. Clonar el archivo `.env.template `y 
+renombrar la copia a .env.
+
+
+6. Llenar las variables de entorno de .env
+
+7. Ejecutar la aplicación en Dev:
+```
+yarn start:dev
+```
+
+## Stack Usado
+*MongoDb Dockerizado
+*Nest 
+*Docker

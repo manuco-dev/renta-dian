@@ -5,7 +5,7 @@ import { RentaModule } from './renta/renta.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ClienteModule } from './cliente/cliente.module';
 import { CommonModule } from './common/common.module';
-import { SeedModule } from './seed/seed.module';
+
 import { ConfigModule } from '@nestjs/config';
 import { EnvConfiguration } from './config/env.config';
 import { JoiValidationSchema } from './config/joi.validation';
@@ -33,7 +33,7 @@ import { JoiValidationSchema } from './config/joi.validation';
     
     CommonModule,
     
-    SeedModule,
+    
     
     ],
   controllers: [],

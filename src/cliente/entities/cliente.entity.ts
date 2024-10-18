@@ -4,17 +4,17 @@ import { Document } from "mongoose";
 @Schema()
 export class Cliente extends Document {
 
-    @Prop({required: true})
+    @Prop({required: false})
     name: string;
 
-    @Prop({required: true})
+    @Prop({required: false})
     lastname: string;
 
 
-    @Prop({required: true, unique: true})
+    @Prop({required: false, unique: false})
     email: string;
 
-    @Prop({required: true})
+    @Prop({required: false})
     cel: string;
 
 

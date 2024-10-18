@@ -22,10 +22,11 @@ export class ClienteService {
   async create(createClienteDto: CreateClienteDto) {
     toLowerCaseStrings(createClienteDto)
     try {
-      const cliente = await  this.clienteModel.create(createClienteDto);
+      const cliente = await this.clienteModel.create(createClienteDto);
       return cliente;
     } catch (error) {
       this.handleExceptions(error)
+      console.log('Mismo Correo')
   }
 }
 
@@ -66,7 +67,7 @@ export class ClienteService {
     }
 
     if ( !cliente ) 
-      throw new NotFoundException(`Pokemon with id, name or no "${ term }" not found`);
+      throw new NotFoundException(`Cliente with id, name or no "${ term }" not found`);
     
     return cliente;
   }

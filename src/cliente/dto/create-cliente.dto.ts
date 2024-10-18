@@ -3,7 +3,6 @@ import { IsString, IsEmail, IsNotEmpty } from "class-validator";
 
 export class CreateClienteDto {
 
-    @IsString()
     @IsNotEmpty({ message: "El nombre es obligatorio" })
     name: string;
 

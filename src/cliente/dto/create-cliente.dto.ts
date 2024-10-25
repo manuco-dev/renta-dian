@@ -4,6 +4,9 @@ import { IsString, IsEmail, IsNotEmpty, IsOptional } from "class-validator";
 export class CreateClienteDto {
 
     @IsOptional()
+    cedula: string;
+
+    @IsOptional()
     name: string;
 
     @IsString()

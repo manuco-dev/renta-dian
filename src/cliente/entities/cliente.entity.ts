@@ -4,6 +4,10 @@ import { Document } from "mongoose";
 @Schema()
 export class Cliente extends Document {
 
+    
+    @Prop({required: false})
+    cedula: string;
+
     @Prop({required: false})
     name: string;
 

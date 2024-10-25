@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
-import { RentaModule } from './renta/renta.module';
+
 import { MongooseModule } from '@nestjs/mongoose';
 import { ClienteModule } from './cliente/cliente.module';
 import { CommonModule } from './common/common.module';
@@ -28,8 +28,7 @@ import { JoiValidationSchema } from './config/joi.validation';
     
     MongooseModule.forRoot(process.env.MONGODB),
     
-    RentaModule,
-    
+      
     ClienteModule,
     
     CommonModule,
